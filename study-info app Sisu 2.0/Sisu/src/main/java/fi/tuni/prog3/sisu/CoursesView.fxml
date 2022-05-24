@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TreeTableColumn?>
+<?import javafx.scene.control.TreeTableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import fi.tuni.prog3.sisu.*?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane prefHeight="616.0" prefWidth="840.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox alignment="TOP_CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox minHeight="-Infinity" minWidth="-Infinity" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Tutkinto ohjelma" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                  <Label fx:id="statusMessage" alignment="TOP_CENTER" prefHeight="17.0" prefWidth="407.0" style="-fx-background-color: #b0ff9c#b0ff9c;" text="satatus" textFill="#171717" />
+                        <TreeTableView fx:id="degreeTree" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TreeTableColumn fx:id="colOne" minWidth="400.0" prefWidth="-1.0" text="Tutkintorakenne" />
+                            </columns>
+                            <VBox.margin>
+                                <Insets bottom="1.0" left="1.0" right="1.0" top="1.0" />
+                            </VBox.margin>
+                        </TreeTableView>
+                    </children>
+                </VBox>
+                <VBox style="-fx-background-color: #2C599D;" HBox.hgrow="ALWAYS">
+                    <children>
+                        <Label text="Kurssit" textFill="WHITE">
+                            <font>
+                                <Font size="16.0" />
+                            </font>
+                        </Label>
+                        <ListView fx:id="courseListView" prefWidth="500.0" style="-fx-background-color: #2C599D #2C599D #2C599D #2C599D;">
+                            <cellFactory>
+                                <CourseCellFactory />
+                            </cellFactory>
+                     <padding>
+                        <Insets bottom="10.0" />
+                     </padding>
+                        </ListView>
+                  <AnchorPane minHeight="191.0" prefHeight="422.0" style="-fx-background-color: #2C599D #2C599D;">
+                     <children>
+                        <Label fx:id="courseNameLbl" layoutX="15.0" layoutY="18.0" prefHeight="17.0" prefWidth="322.0" style="-fx-background-color: #2C599D;" text="Kurssin nimi" textFill="WHITE" AnchorPane.topAnchor="5.0" />
+                        <Label fx:id="pointsLbl" layoutX="14.0" layoutY="41.0" prefHeight="17.0" prefWidth="313.0" style="-fx-background-color: #2C599D;" text="Opintopisteet" textFill="WHITE" AnchorPane.topAnchor="25.0" />
+                        <WebView fx:id="courseInfo" layoutY="58.0" prefHeight="117.0" prefWidth="354.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="80.0" AnchorPane.topAnchor="48.0" />
+                        <WebView fx:id="outcomes" layoutX="15.0" layoutY="182.0" prefHeight="117.0" prefWidth="354.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="80.0" />
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </AnchorPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveAction" style="-fx-background-color: #f98125;" text="Tallenna" textFill="WHITE" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+        <Button fx:id="cancelButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#cancelActioln" prefHeight="26.0" prefWidth="63.0" style="-fx-background-color: #f98125;" text="Eiku" textFill="WHITE" AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="10.0" />
+    </children>
+</AnchorPane>

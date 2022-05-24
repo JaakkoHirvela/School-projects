@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<FlowPane alignment="CENTER" prefHeight="265.0" prefWidth="493.0" style="-fx-background-color: #193A6F #193A6F; -fx-border-color: #193A6F #193A6F #193A6F #193A6F;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox>
+         <children>
+            <Label alignment="TOP_CENTER" prefHeight="17.0" prefWidth="365.0" text="Valitse tila" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <HBox alignment="CENTER" nodeOrientation="LEFT_TO_RIGHT" spacing="10.0">
+               <children>
+                  <Label text="Nimi" textFill="WHITE" />
+                  <TextField fx:id="userName" />
+                  <Label fx:id="messageLbl" textFill="WHITE" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </VBox>
+      <GridPane alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="111.0" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="103.0" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="ALWAYS" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="studentBtn" mnemonicParsing="false" onAction="#studentAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #f98125 #f98125;" text="Oppilas" textFill="WHITE" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </Button>
+            <Button fx:id="teacherBtn" mnemonicParsing="false" onAction="#teacherAction" prefHeight="26.0" prefWidth="100.0" style="-fx-background-color: #f98125 #f98125;" text="Opettaja" textFill="WHITE" GridPane.columnIndex="1" GridPane.halignment="CENTER">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+</FlowPane>

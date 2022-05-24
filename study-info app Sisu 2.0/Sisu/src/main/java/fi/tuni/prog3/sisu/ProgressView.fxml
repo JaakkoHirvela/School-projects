@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox style="-fx-background-color: #2C599D;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                    <children>
+                        <TableView fx:id="studentCoursesTableView" style="-fx-background-color: #2C599D;" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="nameCol" minWidth="-1.0" prefWidth="450.0" text="Nimi" />
+                                <TableColumn fx:id="PointCol" minWidth="-1.0" prefWidth="75.0" text="Op" />
+                                <TableColumn fx:id="gradeCol" minWidth="-1.0" prefWidth="75.0" text="Arvosana" />
+                            </columns>
+                        </TableView>
+                  <AnchorPane prefHeight="81.0" prefWidth="602.0">
+                     <children>
+                        <Label fx:id="pointsLbl" layoutX="104.0" layoutY="14.0" text="Opitntopisteet" textFill="WHITE" AnchorPane.leftAnchor="40.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Label fx:id="currentPoints" layoutX="104.0" layoutY="32.0" text="Suoritettu" textFill="WHITE" AnchorPane.leftAnchor="40.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Label fx:id="pointsLeft" layoutX="101.0" layoutY="49.0" text="Suorittamatta" textFill="WHITE" AnchorPane.leftAnchor="40.0">
+                           <font>
+                              <Font size="15.0" />
+                           </font></Label>
+                        <Label fx:id="avgLbl" layoutX="211.0" layoutY="14.0" text="Keskiarvo" textFill="WHITE">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>

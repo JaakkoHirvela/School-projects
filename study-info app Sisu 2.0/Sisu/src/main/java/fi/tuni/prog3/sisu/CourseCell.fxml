@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListCell?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<fx:root alignment="CENTER_LEFT" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="200.0" style="-fx-background-color: #2C599D #2C599D; -fx-border-color: #FFFFFF;" type="javafx.scene.control.ListCell" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <graphic>
+        <VBox alignment="CENTER_LEFT" minWidth="-Infinity" style="-fx-background-color: #2C599D #2C599D;">
+            <children>
+                <Label fx:id="courseName" text="Course name" textFill="WHITE">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Label>
+                <CheckBox fx:id="courseSelection" mnemonicParsing="false" onAction="#makeSelection" text="select course" textFill="WHITE" />
+            </children>
+        </VBox>
+    </graphic>
+</fx:root>

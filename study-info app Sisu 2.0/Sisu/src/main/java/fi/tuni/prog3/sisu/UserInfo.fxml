@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane style="-fx-background-color: #2C599D #2C599D;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox alignment="TOP_CENTER" layoutX="14.0" layoutY="6.0" spacing="7.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label text="Nimi" textFill="WHITE" />
+            <TextField fx:id="profileName" maxWidth="200.0" prefWidth="200.0" />
+            <Label text="Sukunimi" textFill="WHITE" />
+            <TextField fx:id="sureName" maxWidth="200.0" prefWidth="200.0" />
+            <Label text="Ikä" textFill="WHITE" />
+            <TextField fx:id="age" maxWidth="200.0" prefWidth="200.0" />
+            <Label text="Koulutusohjelma" textFill="WHITE" />
+            <ComboBox fx:id="degreeSelector" />
+            <HBox alignment="TOP_CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveUserInfo" style="-fx-background-color: #f98125 #f98125;" text="Save" textFill="WHITE" />
+               </children>
+            </HBox>
+            <Label fx:id="errorMessage" textFill="#fffefe" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <HBox style="-fx-background-color: #2C599D;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ListView fx:id="studentListView" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #2C599D;" />
+                <VBox alignment="TOP_CENTER" HBox.hgrow="ALWAYS">
+                    <children>
+                        <TableView fx:id="studentCoursesTableView" style="-fx-background-color: #2C599D;" VBox.vgrow="ALWAYS">
+                            <columns>
+                                <TableColumn fx:id="nameCol" minWidth="-1.0" prefWidth="450.0" text="Nimi" />
+                                <TableColumn fx:id="PointCol" minWidth="-1.0" prefWidth="75.0" text="Op" />
+                                <TableColumn fx:id="gradeCol" minWidth="-1.0" prefWidth="75.0" text="Arvosana" />
+                            </columns>
+                        </TableView>
+                  <AnchorPane>
+                     <children>
+                                <VBox alignment="CENTER" AnchorPane.rightAnchor="10.0">
+                                    <children>
+                              <Button alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#saveGrades" style="-fx-background-color: #f98125 #f98125;" text="Tallenna">
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" top="10.0" />
+                                 </VBox.margin></Button>
+                                    </children>
+                                </VBox>
+                     </children>
+                  </AnchorPane>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</AnchorPane>
